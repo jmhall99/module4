@@ -6,6 +6,15 @@ The purpose of this is to take user input of 3 scores and then output the averag
 With some elementary input validation added.
 """
 
+#You can now update your average test scores code from a previous assignment with added input validation
+#using try/except.
+#
+#Update your previous assignment code to include try/except for each of the user inputs.
+#   If the user enters negative numbers or a string for their number inputs, the except path should
+#   Print an error message.
+#Submit your .py file.
+#This is worth 10 points.
+
 #constant "NUMOFSCORES" is set in the constants.py file
 import constants
 
@@ -14,9 +23,24 @@ first_name = str(input("What is your first name?"))
 last_name = str(input("What is your last name?"))
 age = int(input("How old are you? (in whole years) "))
 print("You will now be asked to enter " + str(constants.NUMOFSCORES) + " scores")
-score1 = float(input("Enter a score:"))
-score2 = float(input("Enter a score:"))
-score3 = float(input("Enter a score:"))
+
+try:
+    score1 = float(input("Enter a score:"))
+
+except:
+    print("try again jerky")
+
+try:
+    score2 = float(input("Enter a score:"))
+
+except:
+    print("try again jerky")
+
+try:
+    score3 = float(input("Enter a score:"))
+
+except:
+    print("try again jerky")
 
 #process data to determine average_score
 average_score = float((score1 + score2 + score3) / constants.NUMOFSCORES)
