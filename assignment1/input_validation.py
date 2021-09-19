@@ -26,6 +26,8 @@ print("You will now be asked to enter " + str(constants.NUMOFSCORES) + " scores"
 
 try:
     score1 = float(input("Enter a score:"))
+    if score1 < 0:
+        raise Exception("Sorry, no numbers below zero")
 
 except:
     print("try again jerky")
