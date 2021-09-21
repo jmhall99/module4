@@ -25,21 +25,21 @@ try:
     name = str(input("What is your name?"))
     if (name == ""):
         raise Exception()
-except:
+except ValueError as err:
     print("Sorry, your name is not blank. Try again.")
 
 try:
     hours = int(input("how many hours did you work? (whole numbers only please)"))
     if (hours == 0):
         raise Exception()
-except:
+except ValueError as err:
     print("Why are you bothering people?")
 
 try:
     rate = float(input("What is your hourly rate?"))
     if (rate == 0):
         raise Exception()
-except:
+except ValueError as err:
     print("please stop...")
 
     txt = "{} worked {} hours at a rate of {} per hour."
