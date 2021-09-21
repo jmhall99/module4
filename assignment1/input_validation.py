@@ -1,7 +1,7 @@
 """
 Program: cast_to_integer.py
 Author: Jeremy Hall
-Last date modified: 09/18/2021
+Last date modified: 09/19/2021
 The purpose of this is to take user input of 3 scores and then output the average of those scores.
 With some elementary input validation added.
 """
@@ -27,19 +27,23 @@ print("You will now be asked to enter " + str(constants.NUMOFSCORES) + " scores"
 try:
     score1 = float(input("Enter a score:"))
     if score1 < 0:
-        raise Exception("Sorry, no numbers below zero")
+        raise Exception("Sorry, no scores below zero")
 
 except:
     print("try again jerky")
 
 try:
     score2 = float(input("Enter a score:"))
+    if score2 < 0:
+        raise Exception("Sorry, no scores below zero")
 
 except:
     print("try again jerky")
 
 try:
     score3 = float(input("Enter a score:"))
+    if score3 < 0:
+        raise Exception("Sorry, no scores below zero")
 
 except:
     print("try again jerky")
