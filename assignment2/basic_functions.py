@@ -20,9 +20,27 @@ def hourly_employee_input():
     """
     This function take 3 pieces of input and returns a message.
     """
+
+try:
     name = str(input("What is your name?"))
-    hours = int(input("how many hours did you work?"))
+    if (name == ""):
+        raise Exception()
+except:
+    print("Sorry, your name is not blank. Try again.")
+
+try:
+    hours = int(input("how many hours did you work? (whole numbers only please)"))
+    if (hours == 0):
+        raise Exception()
+except:
+    print("Why are you bothering people?")
+
+try:
     rate = float(input("What is your hourly rate?"))
+    if (rate == 0):
+        raise Exception()
+except:
+    print("please stop...")
 
     txt = "{} worked {} hours at a rate of {} per hour."
     print(txt.format(name,hours,rate))
